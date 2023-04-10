@@ -1,26 +1,30 @@
+let eleccion;
+let comprar;
+let vender;
+let salir;
+
 let nombre =prompt("Hola, ingresa tu nombre y apellido");
 
 if (nombre != "") {
     alert("Hola" + " " + nombre +" " + "bienvenido");
+    do{
+        eleccion = prompt("Ingresa 1 si queres comprar\nIngresa 2 si quieres vender\nIngresa 3 si quieres salir")
+        comprar=1
+        vender=2
+        salir=3
+        if(eleccion == comprar){ compra()
+    }else if(eleccion == vender){ venta()
+    }else if(eleccion == salir){
+        alert("Muchas gracias, te esperamos la proxima")}
+    else{
+        alert("Tu respuesta no es correcta , vuelve a ingresar e ingresa una respuesta correcta")
+    }
+    } while (eleccion != salir);
+    
+
 }else{
     prompt("Su nombre no puede estar vacio.\nPor favor indique su nombre y apalledio")
 }
-
-let comprar="1";
-let vender="2";
-let salir="3";
-let eleccion;
-
-do{
-    eleccion = prompt("Ingresa 1 si queres comprar\nIngresa 2 si quieres vender\nIngresa 3 si quieres salir")
-    if(eleccion == comprar){ compra()
-}else if(eleccion == vender){ venta()
-}else if(eleccion == salir){
-    alert("Muchas gracias, te esperamos la proxima")}
-else{
-    alert("Tu respuesta no es correcta , vuelve a ingresar e ingresa una respuesta correcta")
-}
-} while (eleccion != salir);
 
 
 function compra(){
