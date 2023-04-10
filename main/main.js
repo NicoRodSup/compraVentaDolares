@@ -26,7 +26,6 @@ if (nombre != "") {
     prompt("Su nombre no puede estar vacio.\nPor favor indique su nombre y apalledio")
 }
 
-
 function compra(){
     let cantidadCompra= parseInt(prompt("Cuantos dolares desea comprar\nIndique el valor en numeros"));
     if(Number.isInteger(cantidadCompra)){
