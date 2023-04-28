@@ -5,6 +5,12 @@ let continuar;
 
 let nombre =prompt("Hola, ingresa tu nombre y apellido");
 
+const sucursales =[
+    {nombre:"Sucursal Balvanera",direccion:"Avenida Belgrano 2590",horario:"09 a 16hs"},
+    {nombre:"Sucursal Devoto",direccion:"Cuenca 3420",horario:"10 a 17:30hs"},
+    {nombre:"Sucursal Almagro",direccion:"Avenida Rivadavia 4500",horario:"10 a 15:30hs"},
+    {nombre:"Sucursal Ramos Mejia ",direccion:"Avenida de Mayo 1364",horario:"11 a 16:30hs"}]
+
 if (nombre != "") {
     alert("Hola" + " " + nombre +" " + "bienvenido");
     do{
@@ -29,64 +35,26 @@ if (nombre != "") {
 function compra(){
     let cantidadCompra= parseInt(prompt("Cuantos dolares desea comprar\nIndique el valor en numeros"));
     if(Number.isInteger(cantidadCompra)){
-     alert("El costo total de la operacion es de:"+(390 * cantidadCompra + " " + "pesos argentinos.\nA continuacion le vamos a pedir sus datos para finalizar la operacion"));
+     alert("El costo total de la operacion es de:"+(390 * cantidadCompra + " " + "pesos argentinos.\nA continuacion le vamos a indicar donde puede finalizar la operaion al precio acordado"));
+    const nombreSucursales = sucursales.map(sucursal => sucursal.nombre)
+    const mensaje = `Nombre de las sucursales: \n${nombreSucursales.join("\n")}`
+    alert(mensaje);
     }else{
         alert("Por favor vuelva a repetir la operacion e ingrese un valor numerico");
     }
 }
 
-
 function venta(){
     let cantidadVenta= parseInt (prompt("Cuantos dolares desea vender? Indique el valor en numeros"));
     if(Number.isInteger(cantidadVenta)){
-      alert("Le damos un total de  : "+(cantidadVenta * 380 + " " + "pesos argentinos\nA continuacion le vamos a pedir sus datos para finalizar la operacion"));
+      alert("Le damos un total de  : "+(cantidadVenta * 380 + " " + "pesos argentinos\nA continuacion le vamos a indicar donde puede finalizar la operacion al precio acordado"));
+    const nombreSucursales = sucursales.map(sucursal => sucursal.nombre)
+    const mensaje = `Nombre de las sucursales: \n${nombreSucursales.join("\n")}`
+    alert (mensaje);
     }else{
         alert("Por favor vuelva a repetir la operacion e ingrese un valor numerico")
     }
 }
-
-
-
-// SEGUNDA PREENTREGA
-
-
-// METODO CONSTRUCTOR CON SUCURSALES
-class Sucursal {
-    constructor(nombre,direccion,horario){
-        this.nom=nombre;
-        this.dir=direccion;
-        this.hor=horario;
-        this.info=`Nombre: ${this.nom}\nDireccion: ${this.dir}\nHorario: ${this.hor}`;
-    }
-};
-
-const sucursal1=new Sucursal("Sucursal Balvanera","Avenida Belgrano 2590","09 a 16hs");
-const sucursal2=new Sucursal("Sucursal Devoto","Cuenca 3420", "10 a 17:30hs");
-const sucursal3=new Sucursal("Sucursal Almagro","Avenida Rivadavia 4500","10 a 15:30 hs");
-const sucursal4=new Sucursal("Sucursal Ramos Mejia", "Avenida de Mayo 1364","11 a 16:30hs");
-
-//MUESTRO LOS DATOS DE LA SUCRUSAL
-console.log(sucursal1.info)
-console.log(sucursal2.info)
-console.log(sucursal3.info)
-console.log(sucursal4.info)
-
-//SUCURSALES ARRAY
-const sukursales =[{nombre:"Sucursal Balvanera",direccion:"Avenida Belgrano 2590",horario:"09 a 16hs"},
-                {nombre:"Sucursal Devoto",direccion:"Cuenca 3420",horario:"10 a 17:30hs"},
-                {nombre:"Sucursal Almagro",direccion:"Avenida Rivadavia 4500",horario:"10 a 15:30hs"},
-                {nombre:"Sucursal Ramos Mejia ",direccion:"Avenida de Mayo 1364",horario:"11 a 16:30hs"}]
-  
-                const ListaNombres = sukursales.map(nombre =>nombre.nombre)
-                console.log(ListaNombres);
-
-                //METIDO FOREACH
-                sukursales.forEach((suc)=>{
-                    console.log(suc);
-                })
-
-// HAY ALGUNA FORMA MAS CONVENIENTO DE NOMBRAR LAS SUCURSALES? METODO CONSTRUCTOR 
-// O MEDIANTE OBJETOS DENTRO DEL ARRAY COMO ARRIBA?
 
 
 //ARRAYS CON LOS CLIENTES
@@ -95,6 +63,7 @@ class Cliente {
         this.nombre  = nombre;
         this.direccion  = direccion;
         this.dni = dni;
+        this.info= `Nombre: ${this.nombre}\nDireccion: ${this.direccion}\n DNI: ${this.dni}`;
     }
 }
 //Declaramos un array de clientes para almacenar objetos
@@ -107,9 +76,10 @@ clientes.push(new Cliente("Martin Lutfi","Delgado 331" ,"28457162"));
 // para ver la cantidad de clientes que hay //
 console.log(Cliente.length);
 
-// ¿ Porque me aparece "false" al buscar con el metodo include "Nicolas Rodriguez" o cualquier palabra? 
-console.log(clientes.includes("Nicolas Rodriguez"));
+//mostrar nombre de un cliente 
 
-// ¿ Como puedo mostrarle al cliente una vez que indico cuanto comprar 
-// las sucursales disponibles para retirar ? Intente llamarlo
-// desde una alert y me aparece como "no inicializada"
+clientes.forEach(cliente => {
+        if(cliente.nombre.includes("Nicolas Rodriguez")){
+            console.log(`Se encontro al cliente "${cliente.nombre}"`);
+        }
+    });
