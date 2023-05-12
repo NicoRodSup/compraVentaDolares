@@ -35,10 +35,10 @@ body{
     word-spacing: 2px;
 }
 
-.compraVenta button{
+.compraVenta .botonOperacion{
     position: absolute;
     top: 85%;
-    left:45%; 
+    left:42%; 
     font-size: 1.6rem;
     border-radius: 20px;
     padding: 10px 15px;
@@ -53,4 +53,42 @@ button:hover{
     color: white;
 }
 
+/* Pagina compraVenta */
 
+.contenedorInput{
+    width: 600px;
+    background: pink;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top:0%;
+    left: 25%;
+}
+.estilosInput{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botonFinalizar{
+    position: relative;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:rgb(219, 115, 133);
+    transition: 0.7s;
+    left: 35%;
+
+}
+
+.contenedor-info{
+    width: 100%;
+    height: 100%;
+}
