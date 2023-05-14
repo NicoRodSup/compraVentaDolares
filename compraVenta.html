@@ -26,11 +26,11 @@
             <input class="estilosInput" id="apellido"type="text" name="apellido" autocomplete="off">
             <br>
 
-            <label class="estilosLabel" for="dni"> DNI :</label>
+            <label class="estilosLabel" for="dni"> DNI </label>
             <input class="estilosInput" id="dni"type="number" name="dni" autocomplete="off">
             <br>
             
-            <label> ¿Que operacion quiere realizar?</label>
+            <label> ¿Que operación quiere realizar?</label>
             
             <input  id ="compra"type="radio" name ="seleccionar" value="compra">
             <label for="compra">Compra</label>
@@ -44,7 +44,7 @@
             <input class="estilosInput" id="cantidad" type="number" name="num">
             <br>
             
-            <label> ¿En que sucursal desea finalizar la operacion?</label>
+            <label> ¿En que sucursal desea finalizar la operación?</label>
             <br>
             <br>
             
@@ -59,16 +59,16 @@
             <br>
             <br>
             
-            <button class="botonFinalizar" id ="cargarInfo" type="submit">Cargar Informacion</button>
+            <button class="botonFinalizar" id ="cargarInfo" type="submit" onclick="ocultar()">Cargar Informacion</button>
         </form>
         <hr>
-        <div class="contenedor-info">
-            <h3 id="mostrarInfo" class="mostrar-info">
-    
-            </h3>
-            </div>
         
+    <div class="contenedor-info">
+        <h3 id="mostrarInfo" class="mostrar-info">
+
+        </h3>
     </div>
+</div>
 
     <script src="./main/main.js"></script>    
 

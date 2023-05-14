@@ -58,7 +58,7 @@ function enviarFormulario (e, cantidad, usuarioOperacion){
             const mostrarSucursalhorario1 = sucursales.find(sucursal => sucursal.horario === valorHorario)
 
         
-        mostrarInfo.innerHTML = `Su operacion fue realizada con exito,tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion  <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en : ${mostrarSucursalNombre1.nombre}<br/> Direccion: ${mostrarSucursalDireccion1.direccion} <br/> Horario :${mostrarSucursalhorario1.horario } `
+            mostrarInfo.innerHTML = `¡SU OPERACION FUE REALIZADA CON EXITO!<br/> Tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
     }
     }else if(inputSucursal2.checked){
         for (sucursal of sucursales){
@@ -80,7 +80,7 @@ function enviarFormulario (e, cantidad, usuarioOperacion){
             let valorHorario ="10 a 15:30hs"
             const mostrarSucursalhorario3 = sucursales.find(sucursal => sucursal.horario === valorHorario)
 
-            mostrarInfo.innerHTML = `Su operacion fue realizada con exito,tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion  <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en : ${mostrarSucursalNombre3.nombre}<br/> Direccion: ${mostrarSucursalDireccion3.direccion} <br/> Horario :${mostrarSucursalhorario3.horario } `
+            mostrarInfo.innerHTML = `¡SU OPERACION FUE REALIZADA CON EXITO!<br/> Tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
         }else if(inputSucursal4.checked)
         for (sucursal of sucursales){
             let valorNombre = "Sucursal Ramos Mejia "
@@ -90,11 +90,13 @@ function enviarFormulario (e, cantidad, usuarioOperacion){
             let valorHorario ="11 a 16:30hs"
             const mostrarSucursalhorario4 = sucursales.find(sucursal => sucursal.horario === valorHorario)
 
-            mostrarInfo.innerHTML = `Su operacion fue realizada con exito,tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion  <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
+            mostrarInfo.innerHTML = `¡SU OPERACION FUE REALIZADA CON EXITO!<br/> Tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> Recibe un total de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
         };
     
     formulario.reset()
+    ocultar()
 };
+
 
 function comprar (cantidad){
     cantidad = 480*cantidad;
@@ -104,4 +106,8 @@ function comprar (cantidad){
 function vender (cantidad){
     cantidad = 420*cantidad;
     return cantidad 
+};
+
+function ocultar(){
+    document.getElementById("formulario").style.display="none"
 }

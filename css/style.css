@@ -10,6 +10,7 @@ body{
 
 .compraVenta{
     width: 100wh;
+    height: auto;
     overflow: hidden;
     position: relative;
     border-radius: 20px;
@@ -92,4 +93,12 @@ button:hover{
     width: 100%;
     height: auto;
 }
+.contenedor-info .mostrar-info{
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+
 
