@@ -66,6 +66,7 @@ button:hover{
     position: absolute;
     top:0%;
     left: 25%;
+    height: 80%;
 }
 .estilosInput{
     width: 100%;
@@ -77,7 +78,7 @@ button:hover{
 
 .botonFinalizar{
     position: relative;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     border-radius: 20px;
     padding: 10px 15px;
     border: none;
@@ -85,7 +86,10 @@ button:hover{
     cursor: pointer;
     background-color:rgb(219, 115, 133);
     transition: 0.7s;
-    left: 35%;
+    left: 32%;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-decoration-line: none;
 }
 
 .contenedor-info{
@@ -93,11 +97,13 @@ button:hover{
     height: auto;
 }
 .contenedor-info .mostrar-info{
-    padding: 20px;
-    margin: 10px;
+    padding: 30px;
+    margin: 15px;
     text-align: center;
     font-size: 1.4rem;
 }
+
+
 
 
 
