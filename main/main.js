@@ -6,14 +6,10 @@ const nombre = document.querySelector("#nombre").value;
 const apellido = document.querySelector("#apellido").value;
 const dni = document.querySelector("#dni").value;
 let cantidad = document.getElementById("cantidad").value;
-e.preventDefault(); // Agregue aca el e.preventDefault() para que no enviara el formulario , no lo envia pero igualmente se dirije 
-// al div como si hubiese sido enviado y recien ahi aparece el "alert";
-
-
-
-
+e.preventDefault(); 
+//Condiciones para que se ejecute el envio//
 if((nombre == "" || apellido == "" || dni.length < 8 || cantidad =="")){
-    swal("Espera!", "Hay datos que no ingresaste!", "warning");
+    swal("Error!", "Hay datos que no ingresaste", "warning");
 } else {
     let usuarioOperacion ={
         nombre: nombre,
@@ -24,13 +20,16 @@ if((nombre == "" || apellido == "" || dni.length < 8 || cantidad =="")){
     const usuarioJSON =JSON.stringify(usuarioOperacion)
     localStorage.setItem("usuario",usuarioJSON);
     const usuarioEnLocalStorage=localStorage.getItem("usuario");
-    const usuarioObjeto = JSON.parse(usuarioEnLocalStorage)
+    const usuarioObjeto = JSON.parse(usuarioEnLocalStorage);
     enviarFormulario(e,cantidad,usuarioOperacion);
+    formulario.reset()
+    ocultar()
+
 }
 });
 
 function enviarFormulario (e, cantidad, usuarioOperacion){
-    e.preventDefault();
+    
 
     const mostrarInfo = document.getElementById("mostrarInfo")
     let inputCompra = document.getElementById("compra")
@@ -47,7 +46,7 @@ function enviarFormulario (e, cantidad, usuarioOperacion){
         {nombre:"Sucursal Ramos Mejia ",direccion:"Avenida de Mayo 1364",horario:"11 a 16:30hs"}]
 
 
-        if(inputCompra.checked){
+    if(inputCompra.checked){
         cantidadOperacion = comprar(cantidad)
         mostrarInfo.innerHTML = `Su operacion fue realizada con exito,tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operacion.No olvides presentar tu DNI. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> El valor total de la operacion es de : ${cantidadOperacion} pesos Argentinos  `
     } else if (inputVenta.checked){
@@ -145,25 +144,27 @@ function enviarFormulario (e, cantidad, usuarioOperacion){
                 const mostrarSucursalDireccion4 = sucursales.find(sucursal => sucursal.direccion === valorDireccion);
                 let valorHorario ="11 a 16:30hs"
                 const mostrarSucursalhorario4 = sucursales.find(sucursal => sucursal.horario === valorHorario)
-
-            mostrarInfo.innerHTML = `¡SU OPERACION FUE REALIZADA CON EXITO!<br/><br/> Tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operación. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> El valor total es de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
+                mostrarInfo.innerHTML = `¡SU OPERACION FUE REALIZADA CON EXITO!<br/><br/> Tienes 24hs para acercarte a la sucursal seleccionada y finalizar la operación. <br/> <br/> Nombre y Apellido: ${usuarioOperacion.nombre} ${usuarioOperacion.apellido} <br/> DNI: ${usuarioOperacion.dni}<br/> El valor total es de : ${cantidadOperacion} pesos Argentinos.<br/> Retira en: ${mostrarSucursalNombre4.nombre}<br/> Direccion: ${mostrarSucursalDireccion4.direccion} <br/> Horario: ${mostrarSucursalhorario4.horario } `
         }};
-
-        
-// aca voy a tener que usar asincronia/promesas para que el formulario se muestre luego de x segundos 
-
+            
+        // alertSwal = () =>{
             swal({
-            title: "Felicitaciones!",
-            text: "Tu solicitud ya fue generada",
-            icon: "success",
-            button: "Aceptar",
-            });
+                title: "Felicitaciones!",
+                text: "Tu solicitud ya fue generada",
+                icon: "success",
+                button: "Aceptar",
+                });    
+        }
+            // swal({
+            // title: "Felicitaciones!",
+            // text: "Tu solicitud ya fue generada",
+            // icon: "success",
+            // button: "Aceptar",
+            // });
 
 // aca voy a tener que usar asincronia/promesas para que el formulario se muestre luego de x segundos 
 
-    formulario.reset()
-    ocultar()
-};
+;
 
 
 function comprar (cantidad){
