@@ -1,4 +1,6 @@
-const formulario = document.getElementById("formulario");
+
+const formulario = document.getElementById("formulario");//
+// const formulario = $("#formulario")
 
 formulario.addEventListener("submit",(e) => {
 
@@ -30,6 +32,7 @@ if((nombre == "" || apellido == "" || dni.length < 8 || cantidad =="")){
     setTimeout(() => {
         mostrar()
     }, 3000);
+    mostrarInfo()
     
     formulario.reset()
     ocultar()
@@ -208,3 +211,6 @@ function mostrar(){
     document.getElementById("btnRegresar").style.display=""
 }
 
+function mostrarInfo(){
+    document.getElementById("mostrarInfo").style.display=""
+}
