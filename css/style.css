@@ -57,7 +57,7 @@ button:hover{
 /* Pagina compraVenta */
 
 .contenedorInput{
-    width: 600px;
+    width: 700px;
     background: pink;
     padding: 30px;
     margin: auto;
@@ -92,15 +92,36 @@ button:hover{
     text-decoration-line: none;
 }
 
+.btnRegresar{
+    position: relative;
+    font-size: 1.0rem;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:rgb(219, 115, 133);
+    transition: 0.7s;
+    left: 40%;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    text-decoration-line: none;
+
+};
+
 .contenedor-info{
     width: 100%;
     height: auto;
 }
 .contenedor-info .mostrar-info{
-    padding: 30px;
+    padding: 25px;
     margin: 15px;
     text-align: center;
     font-size: 1.4rem;
+    overflow: hidden;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.2;
+
 }
 
 
