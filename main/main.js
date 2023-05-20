@@ -1,5 +1,5 @@
 
-const formulario = document.getElementById("formulario");//
+const formulario = document.getElementById("formulario");
 // const formulario = $("#formulario")
 
 formulario.addEventListener("submit",(e) => {
@@ -214,3 +214,69 @@ function mostrar(){
 function mostrarInfo(){
     document.getElementById("mostrarInfo").style.display=""
 }
+// Data JSon
+
+const btnMostrarSucursal= document.getElementById("btnSucursales");
+const lista = document.querySelector("#json");
+
+btnMostrarSucursal.addEventListener("click",() =>{
+    fetchP();
+    ocultarSucursales();
+})
+        
+
+function fetchP(){
+    fetch('data.json')
+    .then( (res) => res.json())
+    .then (data => {
+        mostrarSucursales(data);
+})
+}
+function mostrarSucursales(sucursal){
+    sucursal.forEach((sucursales) => {
+                    const li = document.createElement('div')
+                    li.innerHTML = `<h3>${sucursales.nombre} </h3><br>
+                                    <p>${sucursales.direccion}</p>
+                                    <p>${sucursales.horario}</p> `
+                    lista.append(li);
+                })
+}
+
+function ocultarSucursales(){
+    lista.classList.toggle("json-active");
+
+
+    if(lista.classList.contains("json-active")){
+        btnMostrarSucursal.innerText= "Ocultar Sucursales";
+        document.getElementById("json").style.display=""
+
+    }else{
+        btnMostrarSucursal.innerText= "Mostrar Sucursales";  
+        document.getElementById("json").style.display="none"
+
+        
+
+
+    }
+
+
+}
+
+
+
+
+
+
+        // function fetchP(){
+        //     fetch('data.json')
+        //     .then( (res) => res.json())
+        //     .then ((data) => {
+        //         data.forEach((sucursales) => {
+        //             const li = document.createElement('div')
+        //             li.innerHTML = `<h3>${sucursales.nombre} </h3><br>
+        //                             <p>${sucursales.direccion}</p>
+        //                             <p>${sucursales.horario}</p> `
+        //             lista.append(li)
+        //         });
+        //     })
+        // };

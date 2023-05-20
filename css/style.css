@@ -79,6 +79,23 @@ button:hover{
     border: 1px solid;
 }
 
+.btnSucursales{
+    position: relative;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:rgb(219, 115, 133);
+    transition: 0.7s;
+    left: 15%;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    text-decoration-line: none;
+}
+
+
 .botonFinalizar{
     position: relative;
     font-size: 1.0rem;
@@ -125,6 +142,31 @@ button:hover{
     font-family:'Courier New', Courier, monospace;
     line-height: 1.2;
 
+}
+
+.json-active{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color:antiquewhite;
+    height: auto
+
+}
+.json h3{
+    font-size: 1.2rem;
+
+}
+
+.json div{
+    outline: 2px solid rosybrown;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    background-color:pink;
 }
 
 
