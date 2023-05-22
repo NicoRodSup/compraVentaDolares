@@ -75,6 +75,7 @@ button:hover{
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid;
+    font-size: 0.9rem;
 }
 
 .btnSucursales{
@@ -114,7 +115,7 @@ button:hover{
 
 .btnRegresar{
     position: relative;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     border-radius: 20px;
     padding: 10px 15px;
     border: none;
@@ -138,7 +139,7 @@ button:hover{
     padding: 25px;
     margin: 15px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     overflow: hidden;
     font-family:'Courier New', Courier, monospace;
     line-height: 1.2;
@@ -171,159 +172,228 @@ button:hover{
 }
 
 /*Media Query Index*/
+@media(max-width:1220px){
+
+.botonOperacion{
+    font-size: 1.4rem;
+    }
+.compraVenta h1{
+    font-size: 2.5rem
+    }   
+}
 
 @media(max-width:992px){
     
-    .botonOperacion{
-        font-size: 1.0 rem
+.botonOperacion{
+    font-size: 1rem;
     }
-    .compraVenta h1{
-        font-size: 2.2rem
+.compraVenta h1{
+    font-size: 2.0rem
     }   
 }
 
 @media(max-width:768px){
-    .compraVenta h1{
-        font-size: 1.4rem;
-        left: 30%;
+.compraVenta h1{
+    font-size: 1.4rem;
+    left: 30%;
     }
     .botonOperacion{
-        font-size: 0.8 rem
+    font-size: 1.0rem;
+    left: 35%;
     }
 }
 
 @media(max-width:576px){
-    .compraVenta h1{
-        font-size: 1rem;
-        left: 30%;
-    }
+.compraVenta h1{
+    font-size: 1rem;
+    left: 30%;
+}
+.botonOperacion{
+    font-size: 0.8rem;
+    left: 35%;
+}
 }
 
 
 
 /*Media Query compraVenta*/
 @media(max-width:1100px){
-    .contenedorInput{
-        width: 650px;
-        margin-top: 15px;
-        left: 19%;
-        
-    }
-    .estilosLabel{
-        font-size: 1.0rem;
-    }
-    .estilosInput{
-        font-size: 0.5rem;
-    }
-    .btnSucursales{
-        font-size: 0.8rem;
-        left: 5%;
-    }
+    
+.contenedorInput{
+    width: 650px;
+    margin-top: 15px;
+    left: 19%;
+}
+.estilosLabel{
+    font-size: 1.0rem;
+}
+.estilosInput{
+    font-size: 0.7rem;
+}
+.btnSucursales{
+    font-size: 0.8rem;
+    left: 70%;
+}
+.botonFinalizar{
+    font-size: 0.8rem;
+}
 
 }
 
 
 @media(max-width:992px){
     
-    .contenedorInput{
-        width: 550px;
-        margin-top: 20px;
-        left: 19%;
+.contenedorInput{
+    width: 550px;
+    margin-top: 20px;
+    left: 19%;
+}
 
-    }
+.estilosLabel{
+    font-size: 0.8rem;
+}
+.estilosInput{
+    font-size: 0.7rem;
+}
 
-    .estilosLabel{
-        font-size: 0.8rem;
-    }
-    .estilosInput{
-        font-size: 0.3rem;
-    }
+.btnSucursales{
+    font-size: 0.7rem;
+    left: 72%;
+}
 
-    .btnSucursales{
-        font-size: 1.0rem;
-        position: absolute;
-        margin-top: 50px;
-        margin-left: 280px;
+.botonFinalizar{
+    font-size: 0.7rem;
+    left: 30%; 
+}
 
-    }
-
-    .botonFinalizar{
-        font-size: 1.0rem;
-        margin-top: 25px;
-        left: 10%;        
-    }
+.contenedor-info .mostrar-info{
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
 }
 
     @media(max-width:768px){
 
-        .contenedorInput{
-            width: 470px;
-            margin-top: 10px;
-            left: 15%;
-    
-        }
-    
-        .estilosLabel{
-            font-size: 0.7rem;
-        }
-        .estilosInput{
-            font-size: 0.4rem;
-        }
-    
-        .btnSucursales{
-            font-size: 0.7rem;
-            position: absolute;
-            margin-top: 50px;
-            margin-left: 300px;
-            margin: 0;
-            padding: 7px 12px;
-    
-        }
-    
-        .botonFinalizar{
-            font-size: 0.7rem;
-            margin-top: 25px;
-            left: 10%;        
-        }
-    }
+.contenedorInput{
+    width: 470px;
+    margin-top: 10px;
+    left: 15%;
+}
 
-    @media(max-width:576px){
+.estilosLabel{
+    font-size: 0.7rem;
+}
+.estilosInput{
+    font-size: 0.6rem;
+}
 
-        .contenedorInput{
-            width: 300px;
-            margin-top: 10px;
-            left: 15%;
+.btnSucursales{
+    font-size: 0.5rem;
+    padding: 7px 12px;
+    left: 75%;    
+}
     
-        }
-    
-        .estilosLabel{
-            font-size: 0.6rem;
-        }
-        .estilosInput{
-            font-size: 0.1rem;
-        }
+.botonFinalizar{
+    font-size: 0.7rem;
+    margin-top: 25px;
+    left: 30%;        
+}
 
-        .saltoLinea{
-            display: none;
+.contenedor-info .mostrar-info{
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+.btnRegresar{
+    position: relative;
+    font-size: 0.7rem;
+    left: 35%;
+}    
+}
 
-        }
+@media(max-width:576px){
+
+.contenedorInput{
+    width: 350px;
+    margin-top: 20px;
+    left: 15%;
     
-        .btnSucursales{
-            font-size: 0.6rem;
-            position: relative;
-            margin-top: 50px;
-            margin: 0;
-            padding: 5px 10px;
+}
     
-        }
+.estilosLabel{
+    font-size: 0.6rem;
+}
+.estilosInput{
+    font-size: 0.6rem;
+}
+
+.saltoLinea{
+    display: none;
+
+}
     
-        .botonFinalizar{
-            font-size: 0.9rem;
-            margin-top: 25px;
-            left: 10%;        
-            padding: 5px 10px;
+.btnSucursales{
+    font-size: 0.6rem;
+    margin-top: 50px;
+    padding: 5px 10px;
+    left: 25%;
+    margin-top: 40px;
+    
+}
+    
+.botonFinalizar{
+    font-size: 0.7rem;
+    margin-top: 60px;
+    left: 22%;        
+    padding: 5px 10px;
+}
+        
+.contenedor-info .mostrar-info{
+        padding: 15px;
+        margin: 5px;
+        text-align: center;
+        font-size: 1.0rem;
+        overflow: hidden;
         }
-    }
+.btnRegresar{
+    position: relative;
+    font-size: 0.7rem;
+    left: 35%;
+};    
+}
+
+@media(max-width:420px){
+.contenedorInput{
+    width: 300px;
+    margin-top: 20px;
+    left: 10%;
+}
+.btnSucursales{
+    font-size: 0.5rem;
+    margin-top: 150px;
+    padding: 5px 10px;
+    left: 25%;
+    margin-top: 40px;
+}
+
+.botonFinalizar{
+    font-size: 0.6rem;
+    margin-top: 65px;
+    left: 22%;        
+    padding: 5px 10px;
+}
+.estilosLabel{
+    font-size: 0.5rem;
+}
+.estilosInput{
+    font-size: 0.6rem;
+}
+}
 
 
 
