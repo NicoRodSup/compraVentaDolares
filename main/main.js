@@ -1,6 +1,5 @@
 
 const formulario = document.getElementById("formulario");
-// const formulario = $("#formulario")
 
 formulario.addEventListener("submit",(e) => {
 
@@ -205,6 +204,7 @@ function vender (cantidad){
 
 function ocultar(){
     document.getElementById("formulario").style.display="none"
+    btnMostrarSucursal.style.display="none"
 };
 
 function mostrar(){
@@ -231,7 +231,7 @@ function fetchP(){
     .then (data => {
         mostrarSucursales(data);
 })
-}
+};
 function mostrarSucursales(sucursal){
     sucursal.forEach((sucursales) => {
                     const li = document.createElement('div')
@@ -240,7 +240,7 @@ function mostrarSucursales(sucursal){
                                     <p>${sucursales.horario}</p> `
                     lista.append(li);
                 })
-}
+};
 
 function ocultarSucursales(){
     lista.classList.toggle("json-active");
@@ -253,30 +253,6 @@ function ocultarSucursales(){
     }else{
         btnMostrarSucursal.innerText= "Mostrar Sucursales";  
         document.getElementById("json").style.display="none"
-
-        
-
-
+    
     }
-
-
-}
-
-
-
-
-
-
-        // function fetchP(){
-        //     fetch('data.json')
-        //     .then( (res) => res.json())
-        //     .then ((data) => {
-        //         data.forEach((sucursales) => {
-        //             const li = document.createElement('div')
-        //             li.innerHTML = `<h3>${sucursales.nombre} </h3><br>
-        //                             <p>${sucursales.direccion}</p>
-        //                             <p>${sucursales.horario}</p> `
-        //             lista.append(li)
-        //         });
-        //     })
-        // };
+};

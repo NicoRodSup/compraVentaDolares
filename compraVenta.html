@@ -8,12 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,300;1,500;1,600;1,800&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " ></script> 
-    <script src="./jQuery/jquery.js"></script>
-    
-    
+    <!-- <script src="./jQuery/jquery.js"></script> -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -26,48 +24,48 @@
         <form id="formulario" class="form">
             <label class="estilosLabel" for="nombre"> Nombre</label>
             <input class="estilosInput"  id="nombre" type="text" name="nombre" autocomplete="off">
-            <br>
+            <br class="saltoLinea">
 
             <label class="estilosLabel" for="apellido"> Apellido</label>
             <input class="estilosInput" id="apellido"type="text" name="apellido" autocomplete="off">
-            <br>
+            <br class="saltoLinea">
 
             <label class="estilosLabel" for="dni"> DNI </label>
             <input class="estilosInput" id="dni"type="number" name="dni" autocomplete="off">
-            <br>
+            <br class="saltoLinea">
             
-            <label> ¿Que operación quiere realizar?</label>
+            <label class="estilosLabel"> ¿Que operación quiere realizar?</label>
             
             <input  id ="compra"type="radio" name ="seleccionar" value="compra">
-            <label for="compra">Compra</label>
+            <label class="estilosLabel" for="compra">Compra</label>
             
-            <input  id ="venta"type="radio" name ="seleccionar" value="venta">
-            <label for="venta">Venta</label>
-            <br>
-            <br>
+            <input id ="venta"type="radio" name ="seleccionar" value="venta">
+            <label class ="estilosLabel"for="venta">Venta</label>
+            <br class="saltoLinea">
+            <br class="saltoLinea">
             
-            <label for="cantidad"> Indique la cantidad en Dolares  </label>
+            <label for="cantidad" class="estilosLabel" > Indique la cantidad en Dolares  </label>
             <input class="estilosInput" id="cantidad" type="number" name="num">
             <br>
             
-            <label> ¿En que sucursal desea finalizar la operación?</label>
+            <label class="estilosLabel"> ¿En que sucursal desea finalizar la operación?</label>
             <br>
             <br>
+    
             
             <input class="" id ="sucursal1"type="radio" name ="finalizar" value="sucursal1">
-            <label for="sucursal1">Balvanera</label>
+            <label class="estilosLabel" for="sucursal1">Balvanera</label>
             <input class="" id ="sucursal2"type="radio" name ="finalizar" value="sucursal2">
-            <label for="sucursal2">Devoto</label>
+            <label class="estilosLabel" for="sucursal2">Devoto</label>
             <input class="" id ="sucursal3"type="radio" name ="finalizar" value="sucursal3">
-            <label for="sucursal3">Almagro</label>
+            <label class="estilosLabel" for="sucursal3">Almagro</label>
             <input class="" id ="sucursal4"type="radio" name ="finalizar" value="sucursal4">
-            <label for="sucursal4">Ramos Mejia</label>
-            <a href="#json"><button class="btnSucursales" id="btnSucursales" type="button" > <b>Mostrar Sucursales</b> </button></a>
-            <br>
+            <label class="estilosLabel" for="sucursal4">Ramos Mejia</label>
+            <br class="saltoLinea">
             <button class="botonFinalizar" id ="cargarInfo" type="submit" > <b>Cargar Informacion</b></button>
         </form>
-        <hr>
-        
+        <a href="#json" class="btnSucursales" id="btnSucursales" > <b>Mostrar Sucursales</b></a>
+
     <div class="contenedor-info">
         <h3 id="mostrarInfo" class="mostrar-info"  style="display: none;"></h3>
     </div>

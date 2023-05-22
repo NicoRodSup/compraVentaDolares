@@ -9,9 +9,7 @@
 
 }
 
-/* body{
-    font-family: 'Montserrat', sans-serif;
-} */
+/*Pagina Index*/
 
 .compraVenta{
     width: 100wh;
@@ -30,7 +28,7 @@
 
 
 .compraVenta h1{
-    font-size: 4.0rem;
+    font-size: 3.8rem;
     color: white;
     position: absolute;
     top: 15%;
@@ -41,11 +39,11 @@
     word-spacing: 2px;
 }
 
-.compraVenta .botonOperacion{
+.botonOperacion{
     position: absolute;
     top: 85%;
     left:42%; 
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     border-radius: 20px;
     padding: 10px 15px;
     border: none;
@@ -66,11 +64,11 @@ button:hover{
     background: pink;
     padding: 30px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     position: absolute;
     top:0%;
     left: 23%;
-    height: 80%;
+    height: 90%;
 }
 .estilosInput{
     width: 100%;
@@ -81,24 +79,26 @@ button:hover{
 
 .btnSucursales{
     position: relative;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: none;
     outline: none;
     cursor: pointer;
     background-color:rgb(219, 115, 133);
     transition: 0.7s;
-    left: 15%;
-    margin-top: 0px;
+    left: 70%;
+    bottom:90px;
     letter-spacing: 1px;
     text-decoration-line: none;
+    text-decoration: none;
+    color: black;
 }
 
 
 .botonFinalizar{
     position: relative;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     border-radius: 20px;
     padding: 10px 15px;
     border: none;
@@ -125,7 +125,8 @@ button:hover{
     left: 40%;
     margin-top: 20px;
     letter-spacing: 1px;
-    text-decoration-line: none;
+    text-decoration: none;
+    color: black
 
 };
 
@@ -168,6 +169,162 @@ button:hover{
     text-align: center;
     background-color:pink;
 }
+
+/*Media Query Index*/
+
+@media(max-width:992px){
+    
+    .botonOperacion{
+        font-size: 1.0 rem
+    }
+    .compraVenta h1{
+        font-size: 2.2rem
+    }   
+}
+
+@media(max-width:768px){
+    .compraVenta h1{
+        font-size: 1.4rem;
+        left: 30%;
+    }
+    .botonOperacion{
+        font-size: 0.8 rem
+    }
+}
+
+@media(max-width:576px){
+    .compraVenta h1{
+        font-size: 1rem;
+        left: 30%;
+    }
+}
+
+
+
+/*Media Query compraVenta*/
+@media(max-width:1100px){
+    .contenedorInput{
+        width: 650px;
+        margin-top: 15px;
+        left: 19%;
+        
+    }
+    .estilosLabel{
+        font-size: 1.0rem;
+    }
+    .estilosInput{
+        font-size: 0.5rem;
+    }
+    .btnSucursales{
+        font-size: 0.8rem;
+        left: 5%;
+    }
+
+}
+
+
+@media(max-width:992px){
+    
+    .contenedorInput{
+        width: 550px;
+        margin-top: 20px;
+        left: 19%;
+
+    }
+
+    .estilosLabel{
+        font-size: 0.8rem;
+    }
+    .estilosInput{
+        font-size: 0.3rem;
+    }
+
+    .btnSucursales{
+        font-size: 1.0rem;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 280px;
+
+    }
+
+    .botonFinalizar{
+        font-size: 1.0rem;
+        margin-top: 25px;
+        left: 10%;        
+    }
+}
+
+    @media(max-width:768px){
+
+        .contenedorInput{
+            width: 470px;
+            margin-top: 10px;
+            left: 15%;
+    
+        }
+    
+        .estilosLabel{
+            font-size: 0.7rem;
+        }
+        .estilosInput{
+            font-size: 0.4rem;
+        }
+    
+        .btnSucursales{
+            font-size: 0.7rem;
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 300px;
+            margin: 0;
+            padding: 7px 12px;
+    
+        }
+    
+        .botonFinalizar{
+            font-size: 0.7rem;
+            margin-top: 25px;
+            left: 10%;        
+        }
+    }
+
+    @media(max-width:576px){
+
+        .contenedorInput{
+            width: 300px;
+            margin-top: 10px;
+            left: 15%;
+    
+        }
+    
+        .estilosLabel{
+            font-size: 0.6rem;
+        }
+        .estilosInput{
+            font-size: 0.1rem;
+        }
+
+        .saltoLinea{
+            display: none;
+
+        }
+    
+        .btnSucursales{
+            font-size: 0.6rem;
+            position: relative;
+            margin-top: 50px;
+            margin: 0;
+            padding: 5px 10px;
+    
+        }
+    
+        .botonFinalizar{
+            font-size: 0.9rem;
+            margin-top: 25px;
+            left: 10%;        
+            padding: 5px 10px;
+        }
+    }
+
 
 
 
