@@ -7,7 +7,7 @@
 ##### El fín de esta página es que el usuario pueda congelar un precio de Compra o Venta de Dolares (por ahora), por al menos 24hs, entre medio de tanta corrida cambiaria en Argentina. El usuario al cargar sus datos congela por 24hs la operacion al precio acordado y debe finalizarla en la sucursal seleccionada.El fín de esta página es que el usuario pueda congelar un precio de Compra o Venta de Dolares (por ahora), por al menos 24hs, entre medio de tanta corrida cambiaria en Argentina. El usuario al cargar sus datos congela por 24hs la operacion al precio acordado y debe finalizarla en la sucursal seleccionada.
 
 ###### Pagina de Inicio para iniciar la operación
-![](https://i.postimg.cc/5yZ8FRyS/Pantallazo-23-05-2023-06-41-44.png)
+![](https://i.postimg.cc/xCPcMD1D/Pantallazo-index.png)
 
 ###### El usuario completa el formulario con sus datos
 ![](https://i.postimg.cc/pXWmsxb5/Pantallazo-23-05-2023-06-41-23.png)
