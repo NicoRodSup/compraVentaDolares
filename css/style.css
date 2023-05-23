@@ -59,16 +59,22 @@ button:hover{
 
 /* Pagina compraVenta */
 
+input{
+font-weight: 600;
+}
+
 .contenedorInput{
-    width: 750px;
+    width: 850px;
     background: pink;
-    padding: 30px;
+    padding: 20px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     position: absolute;
     top:0%;
-    left: 23%;
-    height: 90%;
+    left: 17%;
+    height: auto;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 .estilosInput{
     width: 100%;
@@ -76,6 +82,10 @@ button:hover{
     margin-bottom: 15px;
     border: 1px solid;
     font-size: 0.9rem;
+}
+
+.estilosLabel{
+    font-size: 1.0rem;
 }
 
 .btnSucursales{
@@ -89,7 +99,7 @@ button:hover{
     background-color:rgb(219, 115, 133);
     transition: 0.7s;
     left: 70%;
-    bottom:90px;
+    bottom:100px;
     letter-spacing: 1px;
     text-decoration-line: none;
     text-decoration: none;
@@ -150,7 +160,7 @@ button:hover{
     background-color: whitesmoke;
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
     gap: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -175,20 +185,21 @@ button:hover{
 @media(max-width:1220px){
 
 .botonOperacion{
-    font-size: 1.4rem;
+    font-size: 1.7rem;
+    left: 40%;
     }
 .compraVenta h1{
-    font-size: 2.5rem
+    font-size: 3.2rem
     }   
 }
 
 @media(max-width:992px){
     
 .botonOperacion{
-    font-size: 1rem;
+    font-size: 1.3rem;
     }
 .compraVenta h1{
-    font-size: 2.0rem
+    font-size: 2.5rem
     }   
 }
 
@@ -205,11 +216,11 @@ button:hover{
 
 @media(max-width:576px){
 .compraVenta h1{
-    font-size: 1rem;
+    font-size: 1.2rem;
     left: 30%;
 }
 .botonOperacion{
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     left: 35%;
 }
 }
@@ -220,22 +231,22 @@ button:hover{
 @media(max-width:1100px){
     
 .contenedorInput{
-    width: 650px;
-    margin-top: 15px;
+    width: 750px;
+    margin-top: 20px;
     left: 19%;
 }
 .estilosLabel{
-    font-size: 1.0rem;
+    font-size: 1.3rem;
 }
 .estilosInput{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 .btnSucursales{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     left: 70%;
 }
 .botonFinalizar{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 }
@@ -244,25 +255,26 @@ button:hover{
 @media(max-width:992px){
     
 .contenedorInput{
-    width: 550px;
-    margin-top: 20px;
-    left: 19%;
+    width: 650px;
+    margin-top: 50px;
+    left: 15%;
+
 }
 
 .estilosLabel{
-    font-size: 0.8rem;
+    font-size: 1.0rem;
 }
 .estilosInput{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .btnSucursales{
-    font-size: 0.7rem;
-    left: 72%;
+    font-size: 0.9rem;
+    left: 68%;
 }
 
 .botonFinalizar{
-    font-size: 0.7rem;
+    font-size: 1.0rem;
     left: 30%; 
 }
 
@@ -273,33 +285,40 @@ button:hover{
     font-size: 1.3rem;
     overflow: hidden;
 }
+
+.json-active{
+    display: flex;
+    flex-direction: column;
 }
 
-    @media(max-width:768px){
+
+}
+
+@media(max-width:768px){
 
 .contenedorInput{
-    width: 470px;
-    margin-top: 10px;
-    left: 15%;
+    width: 510px;
+    margin-top: 20px;
+    left: 12%;
 }
 
 .estilosLabel{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 .estilosInput{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .btnSucursales{
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     padding: 7px 12px;
-    left: 75%;    
+    left: 32%;    
 }
     
 .botonFinalizar{
-    font-size: 0.7rem;
-    margin-top: 25px;
-    left: 30%;        
+    font-size: 1.1rem;
+    margin-top: 70px;
+    left: 27%;        
 }
 
 .contenedor-info .mostrar-info{
@@ -319,17 +338,17 @@ button:hover{
 @media(max-width:576px){
 
 .contenedorInput{
-    width: 350px;
-    margin-top: 20px;
-    left: 15%;
+    width: 400px;
+    margin-top: 50px;
+    left: 10%;
     
 }
     
 .estilosLabel{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 .estilosInput{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 .saltoLinea{
@@ -338,8 +357,8 @@ button:hover{
 }
     
 .btnSucursales{
-    font-size: 0.6rem;
-    margin-top: 50px;
+    font-size: 0.8rem;
+    margin-top: 30px;
     padding: 5px 10px;
     left: 25%;
     margin-top: 40px;
@@ -347,8 +366,8 @@ button:hover{
 }
     
 .botonFinalizar{
-    font-size: 0.7rem;
-    margin-top: 60px;
+    font-size: 1.0rem;
+    margin-top: 90px;
     left: 22%;        
     padding: 5px 10px;
 }
@@ -369,29 +388,28 @@ button:hover{
 
 @media(max-width:420px){
 .contenedorInput{
-    width: 300px;
-    margin-top: 20px;
-    left: 10%;
+    width:340px;
+    left: 5%;
 }
 .btnSucursales{
-    font-size: 0.5rem;
-    margin-top: 150px;
+    font-size: 0.7rem;
+    margin-top: 0px;
     padding: 5px 10px;
     left: 25%;
     margin-top: 40px;
 }
 
 .botonFinalizar{
-    font-size: 0.6rem;
-    margin-top: 65px;
+    font-size: 0.8rem;
+    margin-top: 95px;
     left: 22%;        
     padding: 5px 10px;
 }
 .estilosLabel{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 .estilosInput{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 }
 

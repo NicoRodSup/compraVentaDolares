@@ -1,7 +1,7 @@
 [
-    {"nombre":"Sucursal Balvanera","direccion" : "Avenida Belgrano 2590","horario":"09 a 16hs"},
-    {"nombre":"Sucursal Devoto","direccion" : "Cuenca 3420" ,"horario" : "10 a 17:30hs"},
-    {"nombre":"Sucursal Almagro","direccion" : "Avenida Rivadavia 4500","horario":"10 a 15:30hs"},
-    {"nombre":"Sucursal Ramos Mejia","direccion": "Avenida de Mayo 1364" ,"horario":"11 a 16:30hs"}
+    {"nombre":"Sucursal Balvanera","direccion" : "Avenida Belgrano 2590","horario":"09 a 16hs","img":"./balvanera.jpg"},
+    {"nombre":"Sucursal Devoto","direccion" : "Cuenca 3420" ,"horario" : "10 a 17:30hs","img":"../img/devoto.png"},
+    {"nombre":"Sucursal Almagro","direccion" : "Avenida Rivadavia 4500","horario":"10 a 15:30hs","img":"./img/almagro.png"},
+    {"nombre":"Sucursal Ramos Mejia","direccion": "Avenida de Mayo 1364" ,"horario":"11 a 16:30hs","img":"../img/ramosMejia.png"}
 
 ]

@@ -8,7 +8,6 @@ const apellido = document.querySelector("#apellido").value;
 const dni = document.querySelector("#dni").value;
 let cantidad = document.getElementById("cantidad").value;
 
-
 e.preventDefault(); 
 
 //Condiciones para que se ejecute el envio//
@@ -220,7 +219,6 @@ const btnMostrarSucursal= document.getElementById("btnSucursales");
 const lista = document.querySelector("#json");
 
 btnMostrarSucursal.addEventListener("click",() =>{
-    fetchP();
     ocultarSucursales();
 })
         
@@ -232,12 +230,16 @@ function fetchP(){
         mostrarSucursales(data);
 })
 };
-function mostrarSucursales(sucursal){
-    sucursal.forEach((sucursales) => {
+
+fetchP();
+
+function mostrarSucursales(sucursales){
+    sucursales.forEach((sucursal) => {
                     const li = document.createElement('div')
-                    li.innerHTML = `<h3>${sucursales.nombre} </h3><br>
-                                    <p>${sucursales.direccion}</p>
-                                    <p>${sucursales.horario}</p> `
+                    li.innerHTML = `<h3>${sucursal.nombre} </h3><br>
+                                    <p>${sucursal.direccion}</p>
+                                    <p>${sucursal.horario}</p> 
+                                    <img src=${sucursal.img}</img> `
                     lista.append(li);
                 })
 };
@@ -245,14 +247,12 @@ function mostrarSucursales(sucursal){
 function ocultarSucursales(){
     lista.classList.toggle("json-active");
 
-
     if(lista.classList.contains("json-active")){
         btnMostrarSucursal.innerText= "Ocultar Sucursales";
-        document.getElementById("json").style.display=""
+        lista.style.display="";
 
     }else{
         btnMostrarSucursal.innerText= "Mostrar Sucursales";  
-        document.getElementById("json").style.display="none"
-    
+        lista.style.display="none";
     }
 };

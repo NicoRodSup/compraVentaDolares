@@ -8,14 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,300;1,500;1,600;1,800&display=swap" rel="stylesheet">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js " ></script> 
-    <!-- <script src="./jQuery/jquery.js"></script> -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class=contenedorGeneral>
+<div class=contenedorGeneral>
         <section class="compraVenta">
             <img src="./img/calculadora1.jpg" alt="dolares">
             </section>
@@ -52,7 +50,6 @@
             <br>
             <br>
     
-            
             <input class="" id ="sucursal1"type="radio" name ="finalizar" value="sucursal1">
             <label class="estilosLabel" for="sucursal1">Balvanera</label>
             <input class="" id ="sucursal2"type="radio" name ="finalizar" value="sucursal2">
@@ -62,24 +59,27 @@
             <input class="" id ="sucursal4"type="radio" name ="finalizar" value="sucursal4">
             <label class="estilosLabel" for="sucursal4">Ramos Mejia</label>
             <br class="saltoLinea">
+            
             <button class="botonFinalizar" id ="cargarInfo" type="submit" > <b>Cargar Informacion</b></button>
         </form>
         <a href="#json" class="btnSucursales" id="btnSucursales" > <b>Mostrar Sucursales</b></a>
 
-    <div class="contenedor-info">
-        <h3 id="mostrarInfo" class="mostrar-info"  style="display: none;"></h3>
+        <div class="contenedor-info">
+            <h3 id="mostrarInfo" class="mostrar-info"  style="display: none;"></h3>
+        </div>
+    
+        <div class="contenedor-btnRegresar">
+            <a href="compraVenta.html" class="btnRegresar" id="btnRegresar" style="display: none;">Regresar</a>
+        </div>
     </div>
-    <div class="contenedor-btnRegresar">
-        <a href="compraVenta.html" class="btnRegresar" id="btnRegresar" style="display: none;">Regresar</a>
-    </div>
-    </div>
+    
     <div class="json" id="json" style="display: none;" >
         
     </div>
     
 </div>
 
-    <script src="./main/main.js"></script>    
+<script src="./main/main.js"></script>    
 
 </body>
 </html>
