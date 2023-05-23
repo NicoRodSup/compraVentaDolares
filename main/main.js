@@ -239,7 +239,7 @@ function mostrarSucursales(sucursales){
                     li.innerHTML = `<h3>${sucursal.nombre} </h3><br>
                                     <p>${sucursal.direccion}</p>
                                     <p>${sucursal.horario}</p> 
-                                    <img src=${sucursal.img}</img> `
+                                    <img src="./${sucursal.img}"/>`
                     lista.append(li);
                 })
 };

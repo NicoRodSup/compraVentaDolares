@@ -82,10 +82,12 @@ font-weight: 600;
     margin-bottom: 15px;
     border: 1px solid;
     font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 .estilosLabel{
     font-size: 1.0rem;
+    letter-spacing: 1px;
 }
 
 .btnSucursales{
@@ -157,20 +159,26 @@ font-weight: 600;
 }
 
 .json-active{
-    background-color: whitesmoke;
     width: 100%;
     display: flex;
     justify-content:space-evenly;
-    gap: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color:antiquewhite;
-    height: auto
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color:whitesmoke;
+    height:auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
 
 }
 .json h3{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
 
+.json p{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 
 .json div{
@@ -179,6 +187,7 @@ font-weight: 600;
     margin: 5px;
     text-align: center;
     background-color:pink;
+    flex-grow: 5;
 }
 
 /*Media Query Index*/
@@ -237,9 +246,12 @@ font-weight: 600;
 }
 .estilosLabel{
     font-size: 1.3rem;
+    letter-spacing: 0px;
+
 }
 .estilosInput{
     font-size: 0.9rem;
+    letter-spacing: 0px;
 }
 .btnSucursales{
     font-size: 0.9rem;
@@ -263,9 +275,11 @@ font-weight: 600;
 
 .estilosLabel{
     font-size: 1.0rem;
+    letter-spacing: 0px;
 }
 .estilosInput{
     font-size: 0.9rem;
+    letter-spacing: 0px;
 }
 
 .btnSucursales{
@@ -286,11 +300,6 @@ font-weight: 600;
     overflow: hidden;
 }
 
-.json-active{
-    display: flex;
-    flex-direction: column;
-}
-
 
 }
 
@@ -304,9 +313,11 @@ font-weight: 600;
 
 .estilosLabel{
     font-size: 0.9rem;
+    letter-spacing: 0px;
 }
 .estilosInput{
     font-size: 0.8rem;
+    letter-spacing: 0px;
 }
 
 .btnSucursales{
@@ -346,15 +357,22 @@ font-weight: 600;
     
 .estilosLabel{
     font-size: 0.8rem;
+    letter-spacing: 0px;
 }
 .estilosInput{
     font-size: 0.7rem;
+    letter-spacing: 0px;
 }
 
 .saltoLinea{
     display: none;
-
 }
+
+.json div img{
+    width: 300px;
+    height: 200px;
+}
+
     
 .btnSucursales{
     font-size: 0.8rem;
@@ -407,10 +425,26 @@ font-weight: 600;
 }
 .estilosLabel{
     font-size: 0.7rem;
+    letter-spacing: 0px;
 }
 .estilosInput{
     font-size: 0.7rem;
+    letter-spacing: 0px;
 }
+.json div img{
+    width: 250px;
+    height: 150px;
+}
+.json h3{
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+}
+
+.json p{
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+}
+
 }
 
 
